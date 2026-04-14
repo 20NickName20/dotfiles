@@ -1,0 +1,4 @@
+#!/bin/bash
+hyprctl -i 0 keyword "device[at-translated-set-2-keyboard]:enabled" true
+notify-send -u normal "Enabling Keyboard"
+
