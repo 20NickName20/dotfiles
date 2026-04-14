@@ -1,4 +1,4 @@
 tlp.service
 sshd.service
 upower.service
-
+sddm.service

@@ -30,6 +30,9 @@ sudo ./install-system-settings.sh "$PROFILE"
 echo "[+] Installing grub font..."
 sudo ./install-grub-font.sh "$PROFILE"
 
+echo "[+] Installing sddm theme..."
+sudo ./install-sddm-theme.sh "$PROFILE"
+
 echo "[+] Installing configs..."
 ./install-config.sh "$PROFILE"
 
