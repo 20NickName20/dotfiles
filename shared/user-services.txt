@@ -2,4 +2,5 @@ syncthing.service
 pipewire.service
 pipewire-pulse.service
 hyprpolkitagent.service
-
+mpd.service
+mpd-mpris.service

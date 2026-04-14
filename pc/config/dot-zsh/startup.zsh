@@ -4,3 +4,13 @@ alias tetofetch='fastfetch'
 echo ""
 bday-check-rs "$HOME/Notes/obsidian/vault1/Birthday List.md" 20 | lolcat -f | boxes -t 4 -d info
 todo-checker "$HOME/Notes/obsidian/vault1/" | lolcat -f | boxes -t 4 -d info
+
+TMOUT=300
+
+TRAPALRM() {
+    if (( $LINES > 15 && $COLUMNS > 113 )); then
+        tclock --screensaver -s 2 -c "#FF4455"
+    else
+        drift
+    fi
+}

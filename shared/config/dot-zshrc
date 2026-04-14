@@ -51,15 +51,5 @@ zle -N zle-line-init
 
 eval "$(starship init zsh)"
 
-TMOUT=300
-
-TRAPALRM() {
-    if (( $LINES > 15 && $COLUMNS > 113 )); then
-        tclock --screensaver -s 2 -c "#FF4455"
-    else
-        drift
-    fi
-}
-
 source $HOME/.zsh/startup.zsh
 

@@ -54,7 +54,6 @@ if [[ -n "$PROFILE" ]]; then
         grep -vE '^\s*#|^\s*$' "$PROFILE_LIST" | yay -S --needed --noconfirm -
     else
         echo "[!] Profile package list not found: $PROFILE_LIST"
-        exit 1
     fi
 fi
 
@@ -76,7 +75,7 @@ if [[ -n "$PROFILE" ]]; then
         echo "[+] Installing profile flatpak apps from $FLATPAK_PROFILE_LIST"
         grep -vE '^\s*#|^\s*$' "$FLATPAK_PROFILE_LIST" | xargs -r flatpak install -y flathub
     else
-        echo "[!] No profile flatpak list found (optional)"
+        echo "[!] No profile flatpak list found"
     fi
 fi
 
@@ -84,6 +83,5 @@ rustup toolchain install stable
 rustup default stable
 # Install cargo pacakges
 cargo install --git https://github.com/20NickName20/clock-tui --branch screensaver-mode clock-tui
-
 
 echo "[+] Done installing packages"

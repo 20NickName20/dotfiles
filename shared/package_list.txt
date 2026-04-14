@@ -243,3 +243,4 @@ zsh
 pamixer
 boxes
 rsync
+drift-bin

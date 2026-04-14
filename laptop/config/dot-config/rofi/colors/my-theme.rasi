@@ -1,0 +1,10 @@
+/* "My theme" by 20_NickName_20 */
+* {
+    background:     #181920; /* bg_main */
+    background-alt: #1f222f; /* bg_dim */
+    foreground:     #496cee; /* fg_main */
+    selected:       #557fff; /* bg_mode_line */
+    selected-fg:    #005000; /* fg_mode_line */
+    active:         #85c397; /* g_green */
+    urgent:         #bba2a2; /* red */
+}
