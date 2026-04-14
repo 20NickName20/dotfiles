@@ -22,6 +22,7 @@ EOF
 THEME_DIR="$DOTFILES_DIR/$PROFILE/sddm_theme"
 echo $THEME_DIR
 if [ -d "$THEME_DIR" ]; then
+    rm -r "/usr/share/sddm/themes/custom-theme" || true
     cp -r "$THEME_DIR" "/usr/share/sddm/themes/custom-theme"
 else
     echo "[!] Profile $PROFILE doesn't exist!"
