@@ -52,5 +52,13 @@ if [[ -n "$PROFILE" ]]; then
   fi
 fi
 
+
+echo "[+] Installing cargo binaries..."
+cargo install --git https://github.com/20NickName20/clock-tui --branch screensaver-mode clock-tui
+cargo install --git https://github.com/20NickName20/twm-rs
+cargo install --git https://github.com/20NickName20/todo-checker
+cargo install --git https://github.com/20NickName20/bday-check-rs
+
+
 echo "[+] Done"
 

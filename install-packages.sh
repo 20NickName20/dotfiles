@@ -81,7 +81,5 @@ fi
 
 rustup toolchain install stable
 rustup default stable
-# Install cargo pacakges
-cargo install --git https://github.com/20NickName20/clock-tui --branch screensaver-mode clock-tui
 
 echo "[+] Done installing packages"
