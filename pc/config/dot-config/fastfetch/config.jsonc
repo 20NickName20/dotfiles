@@ -1,0 +1,136 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "~/.config/fastfetch/image.png",
+    "width": 35,
+    "height": 18,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 1
+    },
+    "preserveAspectRatio": true
+  },
+  "display": {
+    "showErrors": true,
+    "separator": " > ",
+    "color": {
+      "keys": "38;2;255;128;0",
+      "title": "38;2;255;70;96",
+      "output": "",
+      "separator": "38;2;156;156;156"
+    },
+    "brightColor": true,
+    "duration": {
+      "abbreviation": true
+    },
+    "temp": {
+      "unit": "C",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      }
+    },
+    "key": {
+      "type": "string",
+      "width": 16
+    },
+    "constants": [
+            "──────────────────────────────────────────────────────────────────",
+            "│\u001b[66C│\u001b[66D"
+    ]
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "\u001b[1B{#keys}╭{$1}╮\u001b[65D[{user-name-colored}{at-symbol-colored}{host-name-colored} 🖥 {#keys}]"
+    },
+    {
+      "type": "os",
+      "key": "{$2} OS      "
+    },
+    {
+      "type": "kernel",
+      "key": "{$2} Kernel  "
+    },
+    {
+      "type": "uptime",
+      "key": "{$2} Uptime  "
+    },
+    {
+      "type": "packages",
+      "key": "{$2}󰏖 Packages"
+    },
+    {
+      "type": "shell",
+      "key": "{$2} Shell   "
+    },
+    {
+      "type": "display",
+      "key": "{$2}󰍹 Monitor ",
+      "format": "{width}x{height}, {refresh-rate} Hz"
+    },
+    {
+      "type": "wm",
+      "key": "{$2} WM      ",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "terminal",
+      "key": "{$2} Terminal"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{$2} Font    "
+    },
+    {
+      "type": "cpu",
+      "key": "{$2} CPU     ",
+      "temp": true
+    },
+    {
+        "type": "cpuusage",
+        "key": "{$2} CPU Load"
+    },
+    {
+      "type": "gpu",
+      "key": "{$2}󰾲 GPU     ",
+      "temp": true,
+      "format": "{name} - {temperature}"
+    },
+    {
+      "type": "memory",
+      "key": "{$2} RAM     "
+    },
+    {
+      "type": "disk",
+      "key": "{$2} Disk    ",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type": "localip",
+      "key": "{$2}󰩟 Local IP",
+      "format": "{ipv4} ({ifname})"
+    },
+    {
+      "type": "colors",
+      "key": "{$2} Colors  ",
+      "symbol": "square",
+      "paddingLeft": 0,
+      "block": {
+        "width": 3,
+        "range": [
+          0,
+          15
+        ]
+      }
+    },
+    {
+        "format": "{#1}{#keys}╰{$1}╯",
+        "type": "custom"
+    }
+  ]
+}

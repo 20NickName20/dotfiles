@@ -1,0 +1,65 @@
+HISTFILE=$HOME/.zsh/history
+HISTSIZE=1000
+SAVEHIST=8192
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+
+unsetopt correct
+unsetopt correct_all
+
+bindkey -e
+
+zstyle :compinstall filename '$HOME/.zshrc'
+
+autoload -Uz compinit
+if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+autoload -Uz +X bashcompinit && bashcompinit
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+source $HOME/.zsh/antidote/antidote.zsh
+antidote load $HOME/.zsh/plugins.txt
+
+source $HOME/.zsh/path.zsh
+source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/variables.zsh
+source $HOME/.zsh/functions.zsh
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey '^H' backward-kill-word
+
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[OA' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+bindkey '^[OB' down-line-or-beginning-search
+
+bindkey -r '^['
+
+zle-line-init() {
+  printf '\e[6 q'
+}
+zle -N zle-line-init
+
+eval "$(starship init zsh)"
+
+TMOUT=300
+
+TRAPALRM() {
+    if (( $LINES > 15 && $COLUMNS > 113 )); then
+        tclock --screensaver -s 2 -c "#FF4455"
+    else
+        drift
+    fi
+}
+
+source $HOME/.zsh/startup.zsh
+

@@ -1,0 +1,129 @@
+* {
+    font-family: "0xProto Nerd Font";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    margin: 0px;
+}
+
+#tray menu,
+tooltip {
+    background: #111111;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #611111;
+}
+
+#workspaces {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#workspaces button {
+    font-family: "0xProto Nerd Font Mono";
+    color: #ffffff;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    background-color: #640210;
+    border-radius: 5px;
+}
+
+#workspaces button.urgent {
+    color: #111111;
+    background: #fb5020;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: #1b010b;
+    color: #f1f1fb;
+    border-radius: 5px;
+}
+
+#window,
+#clock,
+#pulseaudio,
+#network,
+#idle_inhibitor,
+#workspaces,
+#tray,
+#cpu,
+#memory,
+#temperature,
+#language {
+    background: rgba(0.18, 0.117, 0.117, 0.65);
+    padding: 0px 5px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#idle_inhibitor {
+    margin-left: 10px;
+    padding-right: 12px;
+    border-radius: 10px;
+}
+
+#idle_inhibitor.activated {
+    background-color: #FFF0AA;
+    color: #000000;
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#workspaces {
+    background: rgba(0.18, 0.117, 0.117, 0.65);
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#window {
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+#clock {
+    color: #ffcfa0;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-right: 0px;
+}
+
+#network {
+    color: #FFF0AA;
+    border-radius: 10px 0px 0px 10px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio.microphone {
+    color: #cba6f7;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+#language {
+    border-radius: 0px 10px 10px 0px;
+}

@@ -1,0 +1,5 @@
+syncthing.service
+pipewire.service
+pipewire-pulse.service
+hyprpolkitagent.service
+

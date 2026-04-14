@@ -1,0 +1,14 @@
+[general]
+fullscreen = true
+early-exit = true
+corner-roundness = 5
+initial-tool = "brush"
+copy-command = "wl-copy"
+disable-notifications = false
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["save-to-clipboard", "exit"]
+
+[font]
+family = "0xProto Nerd Font"
+style = "Regular"
+

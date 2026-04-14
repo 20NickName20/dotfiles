@@ -1,0 +1,14 @@
+[Unit]
+Description=Autostart for awg-quick
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+ExecStart=awg-quick up awg2
+ExecStop=awg-quick down awg2
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
