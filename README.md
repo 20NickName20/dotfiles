@@ -2,6 +2,7 @@
 > [!WARNING]
 > This is not meant to be used on distros other than arch.
 > Don't expect this to work properly.
+> (Update: this does not work well, do not use this)
 
 This repo has my dotfiles and system configuration.
 
