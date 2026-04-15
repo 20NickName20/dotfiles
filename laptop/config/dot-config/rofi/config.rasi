@@ -28,8 +28,8 @@ configuration {
     normal-foreground:           #6601ff;
     active-background:           #000000;
     active-foreground:           #6601ff;
-    selected-normal-background:  #000000;
-    selected-normal-foreground:  #FFFF00;
+    selected-normal-background:  #000050;
+    selected-normal-foreground:  #FFCE44;
     alternate-normal-background: #100515;
     alternate-normal-foreground: #6601ff;
 }
