@@ -1,10 +1,7 @@
 /* "My theme" by 20_NickName_20 */
 * {
-    background:     #201518; /* bg_main */
-    background-alt: #2f1f22; /* bg_dim */
+    background:     #00000099; /* bg_main */
     foreground:     #ee496c; /* fg_main */
     selected:       #ff5c60; /* bg_mode_line */
     selected-fg:    #00203f; /* fg_mode_line */
-    active:         #85c397; /* g_green */
-    urgent:         #bba2a2; /* red */
 }
