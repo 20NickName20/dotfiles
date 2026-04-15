@@ -1,58 +1,43 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
+ * Original Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Edited by 20_NickName_20
  **/
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser";
+    modi:                       "drun,run,filebrowser";
     show-icons:                 true;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
-	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
+    drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
-@import "colors/my-theme.rasi"
 
 * {
     font: "Terminess Nerd Font Bold 15";
-    border-colour:               var(selected);
-    handle-colour:               var(selected);
-    background-colour:           var(background);
-    foreground-colour:           var(foreground);
-    alternate-background:        var(background-alt);
-    normal-background:           var(background);
-    normal-foreground:           var(foreground);
-    urgent-background:           var(urgent);
-    urgent-foreground:           var(background);
-    active-background:           var(active);
-    active-foreground:           var(background);
-    selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(selected-fg);
-    selected-urgent-background:  var(active);
-    selected-urgent-foreground:  var(background);
-    selected-active-background:  var(urgent);
-    selected-active-foreground:  var(background);
-    alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
-    alternate-urgent-background: var(urgent);
-    alternate-urgent-foreground: var(background);
-    alternate-active-background: var(active);
-    alternate-active-foreground: var(background);
+    border-color:               #6601ff;
+    background-color:           #000000;
+    foreground-color:           #6601ff;
+    alternate-background:        #151020;
+    normal-background:           #000000;
+    normal-foreground:           #6601ff;
+    active-background:           #000000;
+    active-foreground:           #6601ff;
+    selected-normal-background:  #000000;
+    selected-normal-foreground:  #FFFF00;
+    alternate-normal-background: #100515;
+    alternate-normal-foreground: #6601ff;
 }
 
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
+    transparency:                false;
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
@@ -66,9 +51,8 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            @background-colour;
+    background-color:            @background-color;
 }
 
 /*****----- Main Box -----*****/
@@ -79,8 +63,6 @@ mainbox {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
     children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
 }
 
@@ -92,9 +74,8 @@ inputbar {
     padding:                     10px;
     border:                      0px 0px 1px 0px;
     border-radius:               0px;
-    border-color:                @border-colour;
     background-color:            @alternate-background;
-    text-color:                  @foreground-colour;
+    text-color:                  @foreground-color;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -131,22 +112,14 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
+
     spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  @foreground-color;
     cursor:                      "default";
-}
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @handle-colour;
-    border-radius:               0px;
-    background-color:            @alternate-background;
 }
 
 /*****----- Elements -----*****/
@@ -157,55 +130,28 @@ element {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  @foreground-color;
     cursor:                      pointer;
 }
 element normal.normal {
     background-color:            var(normal-background);
     text-color:                  var(normal-foreground);
 }
-element normal.urgent {
-    background-color:            var(urgent-background);
-    text-color:                  var(urgent-foreground);
-}
-element normal.active {
-    background-color:            var(active-background);
-    text-color:                  var(active-foreground);
-}
 element selected.normal {
     background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
-}
-element selected.urgent {
-    background-color:            var(selected-urgent-background);
-    text-color:                  var(selected-urgent-foreground);
-}
-element selected.active {
-    background-color:            var(selected-active-background);
-    text-color:                  var(selected-active-foreground);
+    border: 2px solid;
 }
 element alternate.normal {
     background-color:            var(alternate-normal-background);
     text-color:                  var(alternate-normal-foreground);
 }
-element alternate.urgent {
-    background-color:            var(alternate-urgent-background);
-    text-color:                  var(alternate-urgent-foreground);
-}
-element alternate.active {
-    background-color:            var(alternate-active-background);
-    text-color:                  var(alternate-active-foreground);
-}
 element-icon {
-    background-color:            transparent;
     text-color:                  inherit;
     size:                        24px;
     cursor:                      inherit;
 }
 element-text {
-    background-color:            transparent;
     text-color:                  inherit;
     highlight:                   inherit;
     cursor:                      inherit;
@@ -221,15 +167,12 @@ mode-switcher{
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  @foreground-color;
 }
 button {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -237,6 +180,7 @@ button {
 button selected {
     background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
+    border: 2px solid;
 }
 
 /*****----- Message -----*****/
@@ -246,21 +190,20 @@ message {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
+    border-color:                @border-color;
+    text-color:                  @foreground-color;
 }
 textbox {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
+    border-color:                @border-color;
     background-color:            @alternate-background;
-    text-color:                  @foreground-colour;
+    text-color:                  @foreground-color;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
-    placeholder-color:           @foreground-colour;
+    placeholder-color:           @foreground-color;
     blink:                       true;
     markup:                      true;
 }
@@ -268,7 +211,7 @@ error-message {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
-    background-color:            @background-colour;
-    text-color:                  @foreground-colour;
+    border-color:                @border-color;
+    background-color:            @background-color;
+    text-color:                  @foreground-color;
 }
