@@ -13,6 +13,9 @@ PROFILE="${1:-}"
 
 sudo pacman -S --needed --noconfirm flatpak base-devel git rustup
 
+rustup default stable
+rustup toolchain install stable
+
 # ---- Install yay ----
 if ! command -v yay >/dev/null 2>&1; then
     echo "[+] Installing yay..."
@@ -78,8 +81,5 @@ if [[ -n "$PROFILE" ]]; then
         echo "[!] No profile flatpak list found"
     fi
 fi
-
-rustup toolchain install stable
-rustup default stable
 
 echo "[+] Done installing packages"
