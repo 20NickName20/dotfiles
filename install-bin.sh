@@ -5,6 +5,8 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SRC_SHARED="$DOTFILES_DIR/shared/bin"
 DEST="$HOME/.local/bin"
 
+mkdir -pv "$DEST"
+
 echo "[+] Linking shared config: $SRC_SHARED → $DEST"
 
 link_tree() {
