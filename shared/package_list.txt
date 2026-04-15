@@ -191,7 +191,6 @@ starship
 surge
 syncthing
 terminus-font
-terminus-font-ttf
 tesseract
 tesseract-data-eng
 tesseract-data-osd
