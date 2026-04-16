@@ -1,9 +1,7 @@
 alias nikofetch='fastfetch'
 
-clear
-printf '\033[0;0H'
 fortune $HOME/.zsh/data/wm-fortunes | twm-rs -w 50 -h 13 -x 2 -y 0
-printf '\033[15;0H'
+printf '\033[6A'
 {
     todo-checker "$HOME/Notes/obsidian/vault1/"
     echo "- - - - - - - - - - - - - -"
