@@ -1,12 +1,14 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top",
-    "height": 10,
+    "height": 7,
     "position": "top",
-    "exclusive": true,
+    "exclusive": false,
     "mode": "dock",
     "passthrough": false,
     "width": "calc(100% - 20px)",
+    "margin-bottom": 0,
+    "spacing": 0,
     "modules-left": [
         "hyprland/workspaces",
         "idle_inhibitor"
