@@ -56,6 +56,7 @@ fi
 
 
 echo "[+] Installing cargo binaries..."
+cargo install cargo-update
 cargo install --git https://github.com/20NickName20/clock-tui --branch screensaver-mode clock-tui
 cargo install --git https://github.com/20NickName20/twm-rs
 cargo install --git https://github.com/20NickName20/todo-checker
