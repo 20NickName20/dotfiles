@@ -1,3 +1,4 @@
+alias sudo='sudo '
 alias ls='ls -F --color'
 alias rm='rm -v -I'
 alias mv='mv -vi'
