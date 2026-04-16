@@ -10,7 +10,7 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 5
 
 -- Show <tab> and trailing spaces
 vim.o.list = true
@@ -30,6 +30,9 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+
+--- Clipboard
+vim.opt.clipboard = "unnamedplus"
 
 --- End nvim configs ---
 
