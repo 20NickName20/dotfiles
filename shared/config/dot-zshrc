@@ -3,6 +3,7 @@ HISTSIZE=1000
 SAVEHIST=8192
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
+setopt sharehistory
 
 unsetopt correct
 unsetopt correct_all
