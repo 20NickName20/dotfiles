@@ -92,5 +92,8 @@ else
   git -C "$ANTIDOTE_DIR" pull --ff-only
 fi
 
+echo "[+] Applying gtk themes"
+nwg-look -a
+
 echo "[+] Done"
 
