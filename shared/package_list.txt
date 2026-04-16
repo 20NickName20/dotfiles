@@ -224,6 +224,7 @@ wine
 winetricks
 wireless_tools
 wireplumber
+cliphist
 wl-clipboard
 wl-mirror
 words
