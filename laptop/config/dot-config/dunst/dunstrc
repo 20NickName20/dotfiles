@@ -104,7 +104,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
     frame_color = "#a0a0a0"
@@ -180,7 +180,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "<b><span foreground='#ffd063'>%s</span></b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -332,13 +332,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
+    background = "#000000"
     foreground = "#ffffff"
 	highlight = "#722ae6, #e4b5cb"
     timeout = 20
 
 [urgency_normal]
-    background = "#222222"
+    background = "#000000"
     foreground = "#ffffff"
     frame_color = "#6601ff"
     highlight = "#722ae6, #e4b5cb"
@@ -348,7 +348,7 @@
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#222222"
+    background = "#000000"
     foreground = "#ffffff"
     frame_color = "#ff0033"
     highlight = "#d54e53, #f0f0f0"
@@ -356,6 +356,7 @@
     override_pause_level = 60
     # Icon for notifications with critical urgency
     default_icon = dialog-warning
+    format = "<b><span foreground='#ff3040'>%s</span></b>\n%b"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

@@ -356,6 +356,7 @@
     override_pause_level = 60
     # Icon for notifications with critical urgency
     default_icon = dialog-warning
+    format = "<b><span foreground='#ff3040'>%s</span></b>\n%b"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
