@@ -92,6 +92,9 @@ else
   git -C "$ANTIDOTE_DIR" pull --ff-only
 fi
 
+echo "[+] Applying zsh highlight theme..."
+zsh -c "source ~/.zshrc && fast-theme ~/.zsh/highlight-theme.ini"
+
 echo "[+] Applying gtk themes"
 nwg-look -a
 
