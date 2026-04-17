@@ -25,9 +25,12 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=""
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=""
+export HISTORY_SUBSTRING_SEARCH_PREFIXED=1
 
 source $HOME/.zsh/antidote/antidote.zsh
 antidote load $HOME/.zsh/plugins.txt
+
+zstyle ':history-substring-search' query-prefix-only yes
 
 source $HOME/.zsh/path.zsh
 source $HOME/.zsh/aliases.zsh
@@ -38,10 +41,13 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '^H' backward-kill-word
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[OA' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey '^[OB' history-substring-search-down
+bindkey '^[[A' history-search-backward
+bindkey '^[OA' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey '^[OB' history-search-forward
+
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
 
 bindkey -r '^['
 
