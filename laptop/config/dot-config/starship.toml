@@ -22,8 +22,8 @@ error_symbol = "[❯](196)"
 [username]
 show_always = true
 format = "[$user]($style)"
-style_user = "bright-green"
-style_root = "221"
+style_user = "221"
+style_root = "red"
 
 [hostname]
 ssh_only = false
