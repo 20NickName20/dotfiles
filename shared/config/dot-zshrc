@@ -4,6 +4,7 @@ SAVEHIST=8192
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt sharehistory
+setopt NULL_GLOB
 
 unsetopt correct
 unsetopt correct_all
@@ -22,6 +23,9 @@ autoload -Uz +X bashcompinit && bashcompinit
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=""
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=""
+
 source $HOME/.zsh/antidote/antidote.zsh
 antidote load $HOME/.zsh/plugins.txt
 
@@ -34,14 +38,10 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '^H' backward-kill-word
 
-autoload -Uz up-line-or-beginning-search
-autoload -Uz down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey '^[[A' up-line-or-beginning-search
-bindkey '^[OA' up-line-or-beginning-search
-bindkey '^[[B' down-line-or-beginning-search
-bindkey '^[OB' down-line-or-beginning-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[OA' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[OB' history-substring-search-down
 
 bindkey -r '^['
 
