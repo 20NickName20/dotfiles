@@ -5,41 +5,42 @@ add_newline = false
 format = "$username@$hostname $directory$git_branch$git_status$cmd_duration$status$character"
 
 [git_status]
-style = "yellow"
+style = "220"
 
 [git_branch]
-style = "green"
+style = "154"
 
 [directory]
-style = "green"
+style = "12"
 truncation_length = 1
 fish_style_pwd_dir_length = 1
 
 [character]
-success_symbol = "[❯](green)"
-error_symbol = "[❯](red)"
+success_symbol = "[❯](10)"
+error_symbol = "[❯](196)"
 
 [username]
 show_always = true
 format = "[$user]($style)"
-style_user = "bright-green"
+style_user = "204"
 style_root = "red"
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)[$ssh_symbol](bold blue)"
-style = "yellow"
+style = "227"
 ssh_symbol = ' 󰖟 '
 
 [cmd_duration]
 min_time = 500
-format = "⏱ [$duration]($style)"
+format = "⏱ [$duration]($style) "
 style = "dimmed white"
 
 [status]
 disabled = false
-format = "[$status]($style)"
+format = "[$status]($style) "
 style = "bold red"
 symbol = ""
 success_symbol = ""
 map_symbol = true
+
