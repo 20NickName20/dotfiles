@@ -54,3 +54,7 @@ vim.diagnostic.config({
   underline = true,
 })
 
+-- Keymap --
+vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code action" })
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Telescope find files" })
+
