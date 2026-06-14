@@ -54,7 +54,14 @@ vim.diagnostic.config({
   underline = true,
 })
 
--- Keymap --
-vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code action" })
-vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Telescope find files" })
+-- Vars --
+local tsbuiltin = require("telescope.builtin")
+local map = vim.keymap.set
 
+-- Keymap --
+map({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code action" })
+map("n", "<leader>f", tsbuiltin.find_files, { desc = "Telescope find files" })
+map('n', '<leader>b', function() tsbuiltin.buffers({
+    sort_mru=true,
+    ignore_current_buffer=true
+}) end, { desc = "Telescope find buffers" })
