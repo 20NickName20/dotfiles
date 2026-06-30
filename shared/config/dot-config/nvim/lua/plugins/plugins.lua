@@ -1,33 +1,5 @@
 return {
     {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-        config = function()
-            local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-            require("nvim-tree").setup({
-                actions = {
-                    open_file = {
-                        quit_on_open = false,  -- keep tree open
-                        resize_window = true,
-                        window_picker = {
-                            enable = false, -- optional
-                        },
-                    },
-                },
-                view = {
-                    width = 24,
-                    side = "left",
-                },
-            })
-
-
-            vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-        end,
-    },
-
-    {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
