@@ -60,6 +60,7 @@ local map = vim.keymap.set
 
 -- Keymap --
 map({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code action" })
+map("n", "<leader>e", ":Explore<CR>", { silent = true, noremap = true })
 map("n", "<leader>f", tsbuiltin.find_files, { desc = "Telescope find files" })
 map('n', '<leader>b', function() tsbuiltin.buffers({
     sort_mru=true,
