@@ -244,3 +244,4 @@ pamixer
 boxes
 rsync
 drift-bin
+openresolv

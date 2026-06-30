@@ -5,8 +5,8 @@ Wants=network.target
 
 [Service]
 Type=oneshot
-ExecStart=awg-quick up awg2
-ExecStop=awg-quick down awg2
+ExecStart=awg-quick up awg1
+ExecStop=awg-quick down awg1
 RemainAfterExit=yes
 
 [Install]
