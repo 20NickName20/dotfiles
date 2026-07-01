@@ -6,7 +6,7 @@
     "exclusive": false,
     "mode": "dock",
     "passthrough": false,
-    "width": "calc(100% - 20px)",
+    "width": "calc(100% - 10px)",
     "margin-bottom": 0,
     "spacing": 0,
     "modules-left": [
