@@ -5,7 +5,7 @@
     "exclusive": true,
     "mode": "dock",
     "passthrough": false,
-    "width": "calc(100% - 20px)",
+    "width": "calc(100% - 5px)",
     "modules-left": [
         "hyprland/workspaces",
         "idle_inhibitor"
@@ -28,8 +28,8 @@
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "on-scroll-up": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e-1\" }))'",
+        "on-scroll-down": "hyprctl eval 'hl.dispatch(hl.dsp.focus({ workspace = \"e+1\" }))'",
         "format-icons": {
             "1": " ",
             "2": "2",
