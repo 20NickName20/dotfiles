@@ -11,6 +11,8 @@ unsetopt correct_all
 
 bindkey -e
 
+WORDCHARS=""
+
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
