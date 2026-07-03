@@ -6,5 +6,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    hl.exec_cmd("pwsp-daemon")
+    hl.exec_cmd("pwsp-cli set volume 0.15 && pwsp-cli set input alsa_input.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.mono-fallback")
 end)
 
