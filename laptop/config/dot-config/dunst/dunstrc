@@ -29,7 +29,7 @@
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
-    height = (0, 300)
+    height = (0, 100)
 
     # Position the notification in the top right corner
     origin = top-right
@@ -37,7 +37,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (5, 15)
+    offset = (5, 5)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -345,7 +345,8 @@
     timeout = 20
     override_pause_level = 30
     # Icon for notifications with normal urgency
-    default_icon = dialog-information
+    # default_icon = dialog-information
+    default_icon = /home/nickname/.config/dunst/sun.png
 
 [urgency_critical]
     background = "#000000"
