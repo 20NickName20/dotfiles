@@ -29,7 +29,7 @@
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
-    height = (0, 300)
+    height = (0, 150)
 
     # Position the notification in the top right corner
     origin = top-right
@@ -37,10 +37,10 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (5, 15)
+    offset = (10, 10)
 
     # Scale factor. It is auto-detected if value is 0.
-    scale = 0
+    scale = 1
 
     # Maximum number of notification (0 means no limit)
     notification_limit = 10
@@ -104,7 +104,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "#a0a0a0"
@@ -140,7 +140,7 @@
 
     ### Text ###
 
-    font = 0xProto Nerd Font 16
+    font = 0xProto Nerd Font 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -335,14 +335,14 @@
     background = "#222222"
     foreground = "#ffffff"
 	highlight = "#722ae6, #e4b5cb"
-    timeout = 20
+    timeout = 5
 
 [urgency_normal]
     background = "#222222"
     foreground = "#ffffff"
     frame_color = "#ff43a1"
     highlight = "#722ae6, #e4b5cb"
-    timeout = 20
+    timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = dialog-information
@@ -352,7 +352,7 @@
     foreground = "#ffffff"
     frame_color = "#ff0033"
     highlight = "#d54e53, #f0f0f0"
-    timeout = 1800
+    timeout = 30
     override_pause_level = 60
     # Icon for notifications with critical urgency
     default_icon = dialog-warning
