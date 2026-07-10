@@ -66,3 +66,5 @@ map('n', '<leader>b', function() tsbuiltin.buffers({
     sort_mru=true,
     ignore_current_buffer=true
 }) end, { desc = "Telescope find buffers" })
+map('n', '<leader>r', tsbuiltin.lsp_references, { desc = "Telescope find references" })
+map('n', '<leader>d', tsbuiltin.diagnostics, { desc = "Telescope find references" })
