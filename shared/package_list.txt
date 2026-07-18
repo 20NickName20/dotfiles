@@ -246,3 +246,4 @@ rsync
 drift-bin
 openresolv
 qt6-multimedia
+wev
