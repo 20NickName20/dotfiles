@@ -35,7 +35,6 @@ dnsmasq
 docker
 dolphin
 dunst
-dust
 efibootmgr
 efivar
 evtest
@@ -54,7 +53,6 @@ fuse2fs
 fuse3
 fzf
 gdb
-gdu
 gimp
 git
 glad
@@ -247,3 +245,4 @@ drift-bin
 openresolv
 qt6-multimedia
 wev
+ncdu
