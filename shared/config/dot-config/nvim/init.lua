@@ -68,3 +68,6 @@ map('n', '<leader>b', function() tsbuiltin.buffers({
 }) end, { desc = "Telescope find buffers" })
 map('n', '<leader>r', tsbuiltin.lsp_references, { desc = "Telescope find references" })
 map('n', '<leader>d', tsbuiltin.diagnostics, { desc = "Telescope find references" })
+
+vim.o.winborder = 'double'
+
