@@ -94,7 +94,7 @@ hl.animation({
 })
 
 hl.layer_rule({
-    match = { namespace = "match:namespace rofi" },
+    match = { namespace = "rofi" },
     blur = true
 })
 
@@ -140,4 +140,19 @@ hl.config({
         font_family = "0xProto Nerd Font",
     },
 })
+
+hl.window_rule({
+  name = "make windowkill window non blur",
+  match = {
+    class = "windowkill"
+  },
+  no_blur = true
+})
+
+hl.on("hyprland.start", function()
+    hl.exec_cmd("/home/nickname/.cargo/bin/pwsp-daemon")
+    hl.exec_cmd("/home/nickname/.cargo/bin/pwsp-cli set volume 0.15 && /home/nickname/.cargo/bin/pwsp-cli set input alsa_input.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.mono-fallback")
+end)
+
+require("hyprland.pwsp-binds")
 
