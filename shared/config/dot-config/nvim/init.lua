@@ -59,7 +59,9 @@ local tsbuiltin = require("telescope.builtin")
 local map = vim.keymap.set
 
 -- Keymap --
-map({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP code action" })
+vim.keymap.set({ "n", "x" }, "<leader>ca", function()
+	require("tiny-code-action").code_action()
+end, { noremap = true, silent = true })
 map("n", "<leader>e", ":Explore<CR>", { silent = true, noremap = true })
 map("n", "<leader>f", tsbuiltin.find_files, { desc = "Telescope find files" })
 map('n', '<leader>b', function() tsbuiltin.buffers({
