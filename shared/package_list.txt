@@ -52,7 +52,6 @@ git
 glow
 go
 google-chrome
-gradle
 grep
 grim
 grub
@@ -84,8 +83,6 @@ iproute2
 iptables
 iputils
 iwd
-jdk17-openjdk
-jdk21-openjdk
 jq
 kitty
 kitty-shell-integration
@@ -115,7 +112,6 @@ materia-gtk-theme
 materia-kde
 mesa
 meson
-mingw-w64-gcc
 misfortune
 mkinitcpio
 mpc
@@ -166,18 +162,12 @@ sed
 sfml
 sl
 slurp
-smartmontools
 socat
 speedtest-cli
 starship
 surge
 syncthing
 terminus-font
-tesseract
-tesseract-data-eng
-tesseract-data-osd
-tesseract-data-rus
-tk
 tlp
 tlp-pd
 tlp-rdw
@@ -224,3 +214,4 @@ qt6-multimedia
 wev
 ncdu
 vlc
+rsync
