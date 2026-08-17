@@ -18,5 +18,5 @@ alias syssuspend='systemctl suspend'
 
 alias full-upgrade.sh='systemd-inhibit --what=sleep --why="Upgrading system" --who=full-upgrade.sh full-upgrade.sh'
 
-alias patch-vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+alias patch-vencord='sh -c "$(curl -sS https://vencord.dev/install.sh)"'
 
