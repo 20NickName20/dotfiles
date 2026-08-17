@@ -1,0 +1,4 @@
+#!/bin/bash
+hyprctl eval 'hl.device({name="at-translated-set-2-keyboard",enabled=true})'
+notify-send -u normal "Enabling Keyboard"
+
