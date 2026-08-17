@@ -22,16 +22,16 @@ configuration {
     font: "Terminess Nerd Font Bold 15";
     border-color:               #6601ff;
     background-color:           #000000;
-    foreground-color:           #6601ff;
+    foreground-color:           #FFEEAA;
     alternate-background:        #151020;
     normal-background:           #000000;
-    normal-foreground:           #6601ff;
+    normal-foreground:           #FFEEAA;
     active-background:           #000000;
-    active-foreground:           #6601ff;
+    active-foreground:           #FFEEAA;
     selected-normal-background:  #000050;
-    selected-normal-foreground:  #FFCE44;
+    selected-normal-foreground:  #FFF033;
     alternate-normal-background: #100515;
-    alternate-normal-foreground: #6601ff;
+    alternate-normal-foreground: #FFEEAA;
 }
 
 /*****----- Main Window -----*****/
