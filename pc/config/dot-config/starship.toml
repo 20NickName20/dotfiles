@@ -27,9 +27,9 @@ style_root = "red"
 
 [hostname]
 ssh_only = false
-format = "[$hostname]($style)[$ssh_symbol](bold blue)"
+format = "[$hostname]($style)[$ssh_symbol](fg:0 bg:10)"
 style = "227"
-ssh_symbol = ' 󰖟 '
+ssh_symbol = '󰖟 '
 
 [cmd_duration]
 min_time = 500
