@@ -1,1 +1,1 @@
-path=($HOME/.local/bin/ "$(go env GOPATH)/bin" $HOME/.cargo/bin $path)
+path=($HOME/.local/bin/ $HOME/.cargo/bin $path)
