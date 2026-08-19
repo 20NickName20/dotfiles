@@ -14,6 +14,7 @@ alias cowsay='cowsay -f sus'
 alias sl='sl -ec10w'
 
 alias poweroff='systemctl poweroff'
+alias reboot='systemctl reboot'
 alias syssuspend='systemctl suspend'
 
 alias full-upgrade.sh='systemd-inhibit --what=sleep --why="Upgrading system" --who=full-upgrade.sh full-upgrade.sh'
