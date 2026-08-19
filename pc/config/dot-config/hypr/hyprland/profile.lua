@@ -150,7 +150,7 @@ hl.window_rule({
 })
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("/home/nickname/.cargo/bin/pwsp-daemon")
+    hl.exec_cmd("/usr/bin/pwsp-daemon")
     hl.exec_cmd("/usr/bin/pwsp-cli set volume 0.075 && /usr/bin/pwsp-cli set input alsa_input.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.mono-fallback")
 end)
 
