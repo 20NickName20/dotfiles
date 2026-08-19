@@ -14,11 +14,6 @@ fi
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cat <<EOF > /etc/sddm.conf
-[Theme]
-    Current=custom-theme
-EOF
-
 THEME_DIR="$DOTFILES_DIR/$PROFILE/sddm_theme"
 echo $THEME_DIR
 if [ -d "$THEME_DIR" ]; then

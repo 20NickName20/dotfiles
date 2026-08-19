@@ -1,5 +1,6 @@
 activate-linux-git
 aichat
+kwin
 amneziawg-go
 amneziawg-tools
 base
