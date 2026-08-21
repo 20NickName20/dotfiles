@@ -28,7 +28,6 @@ cpio
 cpupower
 curl
 dfc
-dolphin
 dunst
 efibootmgr
 efivar
